@@ -1,0 +1,25 @@
+Lexeme		Token
+      #	Special symbol
+include	Identifier
+ stdioh	Identifier
+    int	Keyword
+      (	Special symbol
+   main	Identifier
+      )	Special symbol
+      {	Special symbol
+      (	Special symbol
+ printf	Identifier
+      "	Special symbol
+      "	Special symbol
+      )	Special symbol
+  Hello	Identifier
+      ;	Special symbol
+    int	Keyword
+      =	Operator
+      /	Operator
+      ;	Special symbol
+     aa	Identifier
+ return	Keyword
+      ;	Special symbol
+      0	Identifier
+      }	Special symbol
