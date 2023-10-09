@@ -39,12 +39,44 @@ int main()
 	fprintf(fp2,"Lexeme\t\tToken\n");
 	while((ch=fgetc(fp1))!=EOF)
 	{
+		if(isdigit(ch))
+		{
+			fprintf(fp2,"%7c\t\tDigit\n",ch);
+		}
+
+		else if(isalpha(ch))
+		{
+			buffer[j]=ch;
+			j++;
+			ch=fgetc(fp1);
+
+			while(isalnum(ch) && ch!=' ')
+			{
+				buffer[j]=ch;
+				j++;
+				ch=fgetc(fp1);
+			}
+
+			buffer[j]='\0';
+			j=0;
+			if(iskeyword(buffer)==1)
+			{
+				fprintf(fp2,"%7s\t\tKeyword\n",buffer);
+			}
+
+			else
+			{
+				fprintf(fp2,"%7s\t\tIdentifier\n",buffer);
+			}
+
+		}
 		for(i=0;i<6;i++)
 		{
 			if(ch==operators[i])
 			{
 				if(ch=='/')
 				{
+
 					char c=fgetc(fp1);
 					if(c =='/')
 					{
@@ -52,18 +84,18 @@ int main()
 					}
 					else if(c =='*')
 					{
-						while((c=fgetc(fp1))!='/'); 
-						
+						while((c=fgetc(fp1))!='/'); 	
 					}
 					else
 					{
-						fprintf(fp2,"%7c\tOperator\n",ch);
+						fprintf(fp2,"%7c\t\tOperator\n",ch);
+						ungetc(c,fp1);
 						break;
 					}
 				}
 				else
 					{
-						fprintf(fp2,"%7c\tOperator\n",ch);
+						fprintf(fp2,"%7c\t\tOperator\n",ch);
 						break;
 					}
 			}
@@ -72,22 +104,9 @@ int main()
 		{
 			if(ch==special[i])
 			{
-				fprintf(fp2,"%7c\tSpecial symbol\n",ch);
+				fprintf(fp2,"%7c\t\tSpecial symbol\n",ch);
 				break;
 			}
-		}
-		if(isalnum(ch))
-		{
-			buffer[j++]=ch;
-		}
-		else if((ch==' '|| ch=='\n'||ch=='('||ch==')'||ch=='<'||ch=='>') && (j!=0))
-		{
-			buffer[j]='\0';
-			j=0;
-			if(iskeyword(buffer)==1)
-				fprintf(fp2,"%7s\tKeyword\n",buffer);
-			else
-				fprintf(fp2,"%7s\tIdentifier\n",buffer);
 		}
 	}
 	fclose(fp1);
