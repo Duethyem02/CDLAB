@@ -1,9 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	printf("Hello");/*output
-	qwerty
-	asdfghj*/
+	printf("Hello");/*print statement*/
 	//comment
 	int a=a/2;
 	return 0;
