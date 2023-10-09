@@ -5,6 +5,6 @@ int main()
 	qwerty
 	asdfghj*/
 	//comment
-	int a=a/b;
+	int a=a/2;
 	return 0;
 }
