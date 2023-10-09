@@ -1,25 +1,28 @@
 Lexeme		Token
-      #	Special symbol
-include	Identifier
- stdioh	Identifier
-    int	Keyword
-      (	Special symbol
-   main	Identifier
-      )	Special symbol
-      {	Special symbol
-      (	Special symbol
- printf	Identifier
-      "	Special symbol
-      "	Special symbol
-      )	Special symbol
-  Hello	Identifier
-      ;	Special symbol
-    int	Keyword
-      =	Operator
-      /	Operator
-      ;	Special symbol
-     aa	Identifier
- return	Keyword
-      ;	Special symbol
-      0	Identifier
-      }	Special symbol
+      #		Special symbol
+include		Identifier
+  stdio		Identifier
+      h		Identifier
+    int		Keyword
+   main		Identifier
+      (		Special symbol
+      )		Special symbol
+      {		Special symbol
+ printf		Identifier
+      (		Special symbol
+      "		Special symbol
+  Hello		Identifier
+      "		Special symbol
+      )		Special symbol
+      ;		Special symbol
+    int		Keyword
+      a		Identifier
+      =		Operator
+      a		Identifier
+      /		Operator
+      2		Digit
+      ;		Special symbol
+ return		Keyword
+      0		Digit
+      ;		Special symbol
+      }		Special symbol
