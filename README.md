@@ -14,3 +14,8 @@
 
 7.Intermediate Code Generation for Simple Expression
 
+8.Lex Program for Number of lines and words
+
+9.Lex Program for abc to ABC
+
+10.Lex Program for vowels and Consonants
