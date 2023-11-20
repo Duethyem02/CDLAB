@@ -4,8 +4,9 @@ int v=0,c=0;
 %}
 
 %%
-[aeiouAEIOU]* {v++;}
-[^aeiouAEIOU] {c++;}
+[aeiouAEIOU] {v++;}
+[ ] 
+. {c++;}
 %%
 
 int main()
